@@ -14,12 +14,13 @@ const Navbar = () => {
           <SearchIcon />
           <input type="search" placeholder="Search a movie...." />
         </div>
+
         <Tooltip title="Switch to Dark Mode">
-          <DarkModeIcon />
+          <DarkModeIcon className={styles.themeIcons} />
         </Tooltip>
         {false && (
           <Tooltip title="Switch to Light Mode">
-            <LightModeIcon />
+            <LightModeIcon className={styles.themeIcons} />
           </Tooltip>
         )}
       </div>

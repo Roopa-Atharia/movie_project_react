@@ -31,10 +31,13 @@
   display: flex;
   gap: 0.5em;
   flex-basis: 20%;
-  border-bottom: 2px solid var(--navbar-input-color);
+  border-bottom: 2px solid var(--navbar-logo-color);
 }
 .navbarSearch input {
   font-size: 1em;
   width: 100%;
   color: var(--primary-text-color);
+}
+.themeIcons {
+  cursor: pointer;
 }
