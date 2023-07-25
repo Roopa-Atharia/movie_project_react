@@ -16,6 +16,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 1.5em;
+  color: var(--navbar-logo-color);
 }
 
 .navbarTitle {
@@ -35,8 +36,8 @@
 }
 .navbarSearch input {
   font-size: 1em;
+  color: var(--navbar-input-color);
   width: 100%;
-  color: var(--primary-text-color);
 }
 .themeIcons {
   cursor: pointer;
