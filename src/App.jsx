@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import MoviesPage from "./pages/moviesPage/MoviesPage";
-import SingleMovieComponent from "./pages/singleMovie/SingleMovieComponent";
+import SingleMoviePage from "./pages/singleMoviePage/SingleMoviePage";
 import Navbar from "./components/navbar/Navbar";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<MoviesPage />} />
-          <Route path="/:id" element={<SingleMovieComponent />} />
+          <Route path="/:id" element={<SingleMoviePage />} />
         </Routes>
       </BrowserRouter>
     </>

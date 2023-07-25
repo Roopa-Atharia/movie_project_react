@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./SingleMovieComponent.module.css";
+import styles from "./SingleMoviePage.module.css";
 import { useParams } from "react-router-dom";
-const SingleMovieComponent = () => {
+const SingleMoviePage = () => {
   const { id } = useParams();
   return <div>SingleMovieComponent {id}</div>;
 };
 
-export default SingleMovieComponent;
+export default SingleMoviePage;
