@@ -34,7 +34,22 @@
   --single-movie-component-movie-card-box-shadow: 0 0 10px rgb(179, 174, 174);
   --single-movie-component-details-color: #61738e;
 }
-
+.darkMode {
+  --primary-text-color: #f5f5f5;
+  --primary-background-color: #1a1919;
+  --secondary-text-color: #f5f5f5;
+  --movie-type-chip-bg-color: rgb(189, 43, 43);
+  --movie-imdb-rating-chip-bg-color: rgb(44, 145, 29);
+  --navbar-box-shadow: 0 2px 2px -2px rgba(242, 241, 241, 0.2);
+  --navbar-background-color: #3c3b3bea;
+  --navbar-logo-color: #757679;
+  --navbar-title-background: #f6f8f9;
+  --navbar-title-gradient: #f6f8f9;
+  --navbar-input-color: #f5f5f5;
+  --movies-child-box-shadow: 0 0 9px rgb(179, 174, 174);
+  --single-movie-component-movie-card-box-shadow: 0 0 10px rgb(179, 174, 174);
+  --single-movie-component-details-color: #8897ae;
+}
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;

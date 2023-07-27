@@ -42,3 +42,14 @@
 .themeIcons {
   cursor: pointer;
 }
+
+@media (max-width: 450px) {
+  .navbarParent {
+    font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .navbarParent {
+    font-size: 8px;
+  }
+}

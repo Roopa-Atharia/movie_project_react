@@ -53,3 +53,22 @@
 .details::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 450px) {
+  .movieCard {
+    font-size: 10px;
+    flex-direction: column;
+    height: 50em;
+    gap: 1em;
+  }
+  .poster {
+    border-radius: 1em 1em 0 0;
+    height: 25em;
+    flex-basis: 40%;
+  }
+}
+@media (max-width: 320px) {
+  .movieCard {
+    font-size: 8px;
+  }
+}
