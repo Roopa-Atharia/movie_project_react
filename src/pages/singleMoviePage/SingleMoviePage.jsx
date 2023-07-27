@@ -1,51 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./SingleMoviePage.module.css";
 import { useParams } from "react-router-dom";
 import SingleMovieComponent from "../../components/singleMovieComponent/SingleMovieComponent";
 
 const SingleMoviePage = () => {
   const { id } = useParams();
-  const singleMovieData = {
-    Title: "Harry Potter and the Deathly Hallows: Part 2",
-    Year: "2011",
-    Rated: "PG-13",
-    Released: "15 Jul 2011",
-    Runtime: "130 min",
-    Genre: "Adventure, Family, Fantasy",
-    Director: "David Yates",
-    Writer: "Steve Kloves, J.K. Rowling",
-    Actors: "Daniel Radcliffe, Emma Watson, Rupert Grint",
-    Plot: "Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.",
-    Language: "English, Latin",
-    Country: "United Kingdom, United States",
-    Awards: "Nominated for 3 Oscars. 47 wins & 94 nominations total",
-    Poster:
-      "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
-    Ratings: [
-      {
-        Source: "Internet Movie Database",
-        Value: "8.1/10",
-      },
-      {
-        Source: "Rotten Tomatoes",
-        Value: "96%",
-      },
-      {
-        Source: "Metacritic",
-        Value: "85/100",
-      },
-    ],
-    Metascore: "85",
-    imdbRating: "8.1",
-    imdbVotes: "905,008",
-    imdbID: "tt1201607",
-    Type: "movie",
-    DVD: "11 Nov 2011",
-    BoxOffice: "$381,447,587",
-    Production: "N/A",
-    Website: "N/A",
-    Response: "True",
+  const [singleMovieData, setSingleMovieData] = useState([]);
+  const fetchMovieData = async (search) => {
+    try {
+      const response = await fetch(
+        `https://www.omdbapi.com/?i=${search}&apikey=${
+          import.meta.env.VITE_MOVIE_API_KEY
+        }`
+      );
+      const data = await response.json();
+      setSingleMovieData(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  useEffect(() => {
+    fetchMovieData(id);
+  }, []);
   return (
     <div className={styles.singleMovieComponentWrapper}>
       <SingleMovieComponent {...singleMovieData} />

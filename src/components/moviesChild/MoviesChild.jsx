@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./MoviesChild.module.css";
 import { useNavigate } from "react-router-dom";
 const MoviesChild = ({ Title, Year, imdbID, Type, Poster }) => {
+  if (Poster === "N/A") return;
   const navigate = useNavigate();
   return (
     <div className={styles.card} onClick={() => navigate("/" + imdbID)}>
