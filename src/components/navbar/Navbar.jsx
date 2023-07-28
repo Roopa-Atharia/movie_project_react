@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./Navbar.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { Tooltip } from "@mui/material";
+import { ThemeContext } from "../../contexts/ThemeContext";
 const Navbar = ({ movie, setMovie }) => {
   const [search, setSearch] = useState("");
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useContext(ThemeContext);
   const handleSearch = (e) => {
     const value = e.target.value;
     setSearch(value);
